@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wilson's Bakery Website
+
+This project is a modern, responsive website for Wilson's Bakery, a local bakery serving Middle Georgia for over 60 years. The website is built using Next.js and styled with Tailwind CSS.
+
+## Project Overview
+
+Wilson's Bakery, established in 1953, is known for its famous Fingernut Cookies™ and other delicious baked goods. This website aims to provide an improved online presence for the bakery, making it easier for customers to learn about their products.
+
+## Features
+
+- Responsive design for optimal viewing on all devices
+- Product showcase
+- About Us section detailing the bakery's history
+- Contact information and location details
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository
+   https://github.com/kgreer0210/wilsons_bakery
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory
+   cd wilsons_bakery
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Install dependencies
+   npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Run the development server
+   npm run dev
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is currently in development. If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+Kyle Greer - kylegreer.kg@gmail.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Project Link: https://github.com/kgreer0210/wilsons_bakery
