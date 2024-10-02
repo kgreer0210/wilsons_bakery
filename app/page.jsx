@@ -5,10 +5,10 @@ import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-background max-w-[80%] mx-auto">
       <Hero />
-      <ProductSection />
       <AboutSection />
+      <ProductSection />
     </main>
   );
 }
