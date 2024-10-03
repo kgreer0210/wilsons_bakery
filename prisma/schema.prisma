@@ -8,17 +8,28 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
-
-model User {
-  id       Int    @id @default(autoincrement())
-  username String @unique
-  password String
-}
-
 model Product {
-  id          Int    @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   name        String
   description String
   price       Float
   category    String
+  images      Image[]
+  highlight   String?
+  features    Feature[]
+}
+
+model Image {
+  id        Int     @id @default(autoincrement())
+  src       String
+  alt       String
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
+}
+
+model Feature {
+  id        Int     @id @default(autoincrement())
+  text      String
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
 }

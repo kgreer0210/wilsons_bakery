@@ -6,7 +6,12 @@ const prisma = new PrismaClient();
 
 export async function GET() {
   try {
-    const products = await prisma.product.findMany();
+    const products = await prisma.product.findMany({
+      include: {
+        images: true,
+        features: true,
+      },
+    });
     return NextResponse.json(products);
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -28,6 +33,17 @@ export async function POST(request) {
         description: body.description,
         price: body.price,
         category: body.category,
+        highlight: body.highlight,
+        images: {
+          create: body.images.map((img) => ({ src: img.src, alt: img.alt })),
+        },
+        features: {
+          create: body.features.map((feature) => ({ text: feature })),
+        },
+      },
+      include: {
+        images: true,
+        features: true,
       },
     });
     return NextResponse.json(product);
