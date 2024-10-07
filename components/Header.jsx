@@ -1,17 +1,27 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HamburgerMenu from "./HamburgerMenu";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/products", label: "Our Products" },
-  { href: "/order", label: "Order Online" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "home", label: "Home" },
+  { href: "about", label: "About Us" },
+  { href: "products", label: "Our Products" },
+  { href: "order", label: "Order Online" },
+  { href: "contact", label: "Contact Us" },
 ];
 
 export default function Header() {
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="relative mb-4">
       {/* Awning */}
@@ -30,13 +40,14 @@ export default function Header() {
         {/* Navigation */}
         <nav className="hidden md:flex space-x-6 text-foreground">
           {links.map((link) => (
-            <Link
+            <a
               key={link.href}
-              href={link.href}
-              className="hover:text-accent transition-colors"
+              href={`#${link.href}`}
+              onClick={(e) => handleScroll(e, link.href)}
+              className="hover:text-accent transition-colors cursor-pointer"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
         {/* Mobile Menu Button */}
