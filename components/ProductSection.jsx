@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { products } from "@/data/products";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ProductSection() {
   const [activeCategory, setActiveCategory] = useState(products[0].category);
@@ -86,10 +88,18 @@ export default function ProductSection() {
                 </ul>
               </div>
             </div>
-            <button className="w-full bg-indigo-800 hover:bg-indigo-900 text-white py-2 sm:py-3 px-4 rounded-full flex items-center justify-center transition duration-300 text-sm sm:text-base">
-              <ShoppingCartIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-              Order Now
-            </button>
+            <div className="flex gap-4">
+              <Link href="https://www.clover.com/online-ordering/wilsons-bakery-warner-robins">
+                <Button className="bg-indigo-800 hover:bg-indigo-900 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-base sm:text-lg">
+                  Order Now
+                </Button>
+              </Link>
+              <Link href="https://www.doordash.com/store/wilson's-bakery-warner-robins-27828426/?event_type=autocomplete&pickup=false">
+                <Button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-base sm:text-lg">
+                  Order Doordash Delivery
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -71,10 +71,14 @@ export default function Hero() {
               <span>478-922-9300</span>
             )}
           </p>
-          <Link href="/order">
+          <Link href="https://www.clover.com/online-ordering/wilsons-bakery-warner-robins">
             <Button className="bg-indigo-800 hover:bg-indigo-900 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-base sm:text-lg">
-              Order Now
-              <span className="ml-2">→</span>
+              Order Pickup
+            </Button>
+          </Link>
+          <Link href="https://www.doordash.com/store/wilson's-bakery-warner-robins-27828426/?event_type=autocomplete&pickup=false">
+            <Button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-base sm:text-lg mt-2">
+              Order Doordash Delivery
             </Button>
           </Link>
         </div>
