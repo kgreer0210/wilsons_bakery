@@ -2,18 +2,27 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 import BusinessHours from "./BusinessHours";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "#about", label: "About Us" },
-  { href: "#products", label: "Our Products" },
-  { href: "#donation", label: "Donation Request" },
+  { href: "home", label: "Home" },
+  { href: "about", label: "About Us" },
+  { href: "products", label: "Our Products" },
+  { href: "donation", label: "Donation Request" },
 ];
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
       {isOpen ? (
@@ -31,14 +40,14 @@ export default function HamburgerMenu() {
             <BusinessHours />
           </div>
           {links.map((link) => (
-            <Link
+            <a
               key={link.href}
-              href={link.href}
+              href={`#${link.href}`}
               className="text-background text-xl mb-4"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleScroll(e, link.href)}
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </div>
       )}
