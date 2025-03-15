@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import BusinessHours from "./BusinessHours";
 
 const links = [
   { href: "/", label: "Home" },
@@ -27,6 +28,9 @@ export default function HamburgerMenu() {
             onClick={() => setIsOpen(false)}
             className="absolute top-4 right-4 text-background"
           />
+          <div className="mb-6 bg-background/10 p-3 rounded-lg">
+            <BusinessHours />
+          </div>
           {links.map((link) => (
             <Link
               key={link.href}

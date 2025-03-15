@@ -4,13 +4,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HamburgerMenu from "./HamburgerMenu";
+import BusinessHours from "./BusinessHours";
 
 const links = [
   { href: "home", label: "Home" },
   { href: "about", label: "About Us" },
   { href: "products", label: "Our Products" },
-  { href: "order", label: "Order Online" },
-  { href: "contact", label: "Contact Us" },
+  { href: "/DonationRequest", label: "Donation Request" },
 ];
 
 export default function Header() {
@@ -37,6 +37,11 @@ export default function Header() {
           <Image src="/Logo.png" alt="Logo" width={120} height={120} />
         </Link>
 
+        {/* Business Hours Status */}
+        <div className="hidden md:block">
+          <BusinessHours />
+        </div>
+
         {/* Navigation */}
         <nav className="hidden md:flex space-x-6 text-foreground">
           {links.map((link) => (
@@ -44,7 +49,7 @@ export default function Header() {
               key={link.href}
               href={`#${link.href}`}
               onClick={(e) => handleScroll(e, link.href)}
-              className="hover:text-accent transition-colors cursor-pointer"
+              className="hover:underline transition-colors"
             >
               {link.label}
             </a>
