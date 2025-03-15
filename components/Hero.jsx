@@ -45,7 +45,7 @@ export default function Hero() {
       <div className="w-full mx-auto md:flex md:justify-between md:items-center text-center md:text-left md:gap-12 lg:gap-16">
         <div className="md:w-1/2 lg:w-2/5">
           <Image
-            src="/logo.png"
+            src="/Logo.png"
             alt="Wilson's Bakery"
             className="mx-auto mb-2 sm:mb-4 w-48 sm:w-64 md:w-auto"
             height={400}

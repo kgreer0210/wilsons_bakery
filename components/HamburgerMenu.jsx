@@ -7,10 +7,9 @@ import BusinessHours from "./BusinessHours";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/products", label: "Our Products" },
-  { href: "/order", label: "Order Online" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "#about", label: "About Us" },
+  { href: "#products", label: "Our Products" },
+  { href: "/DonationRequest", label: "Donation Request" },
 ];
 
 export default function HamburgerMenu() {

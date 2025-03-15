@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "@/app/globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata = {
   title: "Wilson's Bakery - Home of the Famous Fingernut Cookies™",
@@ -26,6 +27,18 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <main className="flex-grow">{children}</main>
+        <Toaster
+          position="bottom-right"
+          closeButton
+          theme="light"
+          expand={true}
+          visibleToasts={3}
+          toastOptions={{
+            style: {
+              fontSize: "16px",
+            },
+          }}
+        />
         <Footer />
       </body>
     </html>

@@ -10,7 +10,7 @@ const links = [
   { href: "home", label: "Home" },
   { href: "about", label: "About Us" },
   { href: "products", label: "Our Products" },
-  { href: "/DonationRequest", label: "Donation Request" },
+  { href: "DonationRequest", label: "Donation Request" },
 ];
 
 export default function Header() {
