@@ -17,7 +17,7 @@ export default function Home() {
       <section id="about">
         <AboutSection />
       </section>
-      <section id="DonationRequest">
+      <section id="donation">
         <DonationRequestSection />
       </section>
       <BacktoTopButton />
