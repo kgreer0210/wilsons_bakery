@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { products } from "@/data/products";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export default function ProductSection() {
   const [activeCategory, setActiveCategory] = useState(products[0].category);
@@ -53,10 +54,12 @@ export default function ProductSection() {
           {/* Product image - full width on mobile */}
           <div className="w-full md:w-1/2 flex items-center justify-center">
             <div className="w-full h-64 sm:h-80 md:h-full flex items-center justify-center p-4">
-              <img
+              <Image
                 src={activeProduct.images[currentImageIndex].src}
                 alt={activeProduct.images[currentImageIndex].alt}
                 className="max-w-full max-h-64 sm:max-h-80 md:max-h-96 object-contain rounded-md"
+                width={500}
+                height={500}
               />
             </div>
           </div>

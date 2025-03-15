@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 const formSchema = z.object({
   organizationName: z.string().min(2, {
@@ -107,10 +108,12 @@ export default function DonationRequestSection() {
       <div className="text-center mb-6">
         <h1 className="text-2xl sm:text-3xl font-bold">Donation Request</h1>
         <div className="relative w-full my-4 sm:my-6 max-w-lg mx-auto">
-          <img
+          <Image
             src="/two-twin-boys-sitting-on-counter.jpg"
             alt="Donation Request"
             className="w-full h-auto rounded-lg shadow-lg object-cover"
+            width={800}
+            height={400}
             style={{ maxHeight: "400px" }}
           />
         </div>
@@ -120,9 +123,9 @@ export default function DonationRequestSection() {
         <div>
           <div className="prose max-w-none mb-6 text-sm sm:text-base">
             <p className="mb-3 sm:mb-4">
-              At Wilson's Bakery, our favorite part of the day is talking to,
-              meeting, and making people smile! We want to meet and know you,
-              and be here to help as best we can with churches, schools and
+              At Wilson&apos;s Bakery, our favorite part of the day is talking
+              to, meeting, and making people smile! We want to meet and know
+              you, and be here to help as best we can with churches, schools and
               other non-profit donation events. We have many calls on this each
               week, and so we have put together this page to allow you to get
               your request to the right person in a timely and efficient manner!
@@ -145,8 +148,8 @@ export default function DonationRequestSection() {
             <p className="mb-2">
               We do our best to honor all requests to qualified organizations
               that apply for a gift card or product donation. If you would like
-              to apply, please make sure that you can answer 'yes' to the
-              following questions:
+              to apply, please make sure that you can answer &apos;yes&apos; to
+              the following questions:
             </p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>

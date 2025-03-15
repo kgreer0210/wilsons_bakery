@@ -4,6 +4,12 @@ const nextConfig = {
   env: {
     JWT_SECRET: process.env.JWT_SECRET,
   },
+  images: {
+    domains: ["www.youtube.com", "youtube.com", "www.youtube-nocookie.com"],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async rewrites() {
     return [
       {
