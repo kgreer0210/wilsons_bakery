@@ -1,16 +1,17 @@
+"use client";
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import { MapPin } from "lucide-react";
 
-export function LocationMap() {
-  const mapCenter = { lat: 34.1072, lng: -118.0597 }; // Coordinates for Warner Robins, GA
+export default function LocationMap() {
+  const mapCenter = { lat: 32.617652154119384, lng: -83.63439330327392 }; // Coordinates for Warner Robins, GA
   const mapContainerStyle = {
     width: "100%",
     height: "300px",
   };
 
   return (
-    <div className="mt-8">
+    <div>
       <h3 className="text-lg font-semibold mb-4">Our Location</h3>
       <LoadScript
         googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
@@ -26,7 +27,7 @@ export function LocationMap() {
 
       <div className="mt-4 space-y-1">
         <p className="flex items-center">
-          <MapPin className="h-4 w-4 mr-2" /> 1234 Walnut Blvd, Warner Robins,
+          <MapPin className="h-4 w-4 mr-2" /> 1719 Watson Blvd, Warner Robins,
           GA 31093, USA
         </p>
         <p>

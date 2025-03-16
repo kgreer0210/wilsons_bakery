@@ -4,6 +4,7 @@ import ProductSection from "@/components/ProductSection";
 import AboutSection from "@/components/AboutSection";
 import BacktoTopButton from "@/components/BacktoTopButton";
 import DonationRequestSection from "@/components/DonationRequest";
+import LocationMap from "@/components/LocationMap";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
       </section>
       <section id="donation">
         <DonationRequestSection />
+      </section>
+      <section id="location">
+        <LocationMap />
       </section>
       <BacktoTopButton />
     </main>
