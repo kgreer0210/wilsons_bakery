@@ -8,6 +8,9 @@ export default function LocationMap() {
   const mapContainerStyle = {
     width: "100%",
     height: "300px",
+    borderRadius: "0.75rem", // 12px rounded corners
+    boxShadow:
+      "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)", // Subtle floating effect
   };
 
   return (
