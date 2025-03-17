@@ -34,17 +34,17 @@ export default function LocationMap() {
           GA 31093, USA
         </p>
         <p>
-          <strong>478.922.9100 - Bakery</strong>
+          <strong>478.922.9300 - Bakery</strong>
         </p>
         <p>
-          <strong>478.922.9555 - Office</strong>
+          <strong>478.922.9915 - Office</strong>
         </p>
         <p className="mt-2">
           <a
-            href="mailto:info@bakery.com"
+            href="mailto:WilsonBakery@outlook.com"
             className="text-blue-600 hover:underline"
           >
-            info@bakery.com
+            WilsonBakery@outlook.com
           </a>
         </p>
       </div>
